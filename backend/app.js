@@ -11,6 +11,6 @@ app.use(express.json());
 // routes
 // middleware
 app.use("/users", require("./routes/user-routes"));
-
+app.use("/", require("./routes/auth-routes"));
 const port = process.env.port || 3000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
