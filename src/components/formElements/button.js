@@ -1,6 +1,6 @@
 import React from "react";
 
-function Button(props) {
+const Button = (props) => {
   return (
     <input
       type="submit"
@@ -10,6 +10,6 @@ function Button(props) {
       {...props}
     />
   );
-}
+};
 
 export default Button;

@@ -1,23 +1,15 @@
 import React from "react";
+// import { options } from "../../../backend/routes/user-routes";
 
-function Checkbox(props) {
+const Checkbox = (props) => {
   return (
     <React.Fragment>
-      {props.options.map((option, index) => {
-        return (
-          <label key={index}>
-            {option}
-            <input
-              type="checkbox"
-              name={props.name}
-              id={props.id}
-              onChange={option.handleChange}
-            />
-          </label>
-        );
-      })}
+      <label>
+        <input type="checkbox" {...props} />
+        {props.data}
+      </label>
     </React.Fragment>
   );
-}
+};
 
 export default Checkbox;
